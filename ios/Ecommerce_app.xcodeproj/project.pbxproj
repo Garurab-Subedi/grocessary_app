@@ -7,33 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04BE8A1DA5844686BB531661 /* Okra-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5360F34A723B493AA3B07254 /* Okra-Medium.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-Ecommerce_app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-Ecommerce_app.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		6A0A9B04DAE94B45AD8CB047 /* Okra-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 729D0A21EC994AC592CD95FE /* Okra-ExtraBold.ttf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		84273F92450AF48821F405C8 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		9A27D15CF01441FB94982FC1 /* Okra-MediumLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8532B4880B9E4191BFD594F3 /* Okra-MediumLight.ttf */; };
+		B2DCEB628D7C4C42AED147AF /* Okra-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CBC19D3529F412F9D499A57 /* Okra-Bold.ttf */; };
+		E91DFB4E31CA4297AAFA3190 /* Okra-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7B51E315BC84459BD30AE6B /* Okra-Regular.ttf */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = Ecommerce_app;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Ecommerce_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ecommerce_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Ecommerce_app/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Ecommerce_app/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = Ecommerce_app/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		2CBC19D3529F412F9D499A57 /* Okra-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Okra-Bold.ttf"; path = "../src/assets/fonts/Okra-Bold.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-Ecommerce_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ecommerce_app.debug.xcconfig"; path = "Target Support Files/Pods-Ecommerce_app/Pods-Ecommerce_app.debug.xcconfig"; sourceTree = "<group>"; };
+		5360F34A723B493AA3B07254 /* Okra-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Okra-Medium.ttf"; path = "../src/assets/fonts/Okra-Medium.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-Ecommerce_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ecommerce_app.release.xcconfig"; path = "Target Support Files/Pods-Ecommerce_app/Pods-Ecommerce_app.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-Ecommerce_app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Ecommerce_app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		729D0A21EC994AC592CD95FE /* Okra-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Okra-ExtraBold.ttf"; path = "../src/assets/fonts/Okra-ExtraBold.ttf"; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Ecommerce_app/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Ecommerce_app/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8532B4880B9E4191BFD594F3 /* Okra-MediumLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Okra-MediumLight.ttf"; path = "../src/assets/fonts/Okra-MediumLight.ttf"; sourceTree = "<group>"; };
+		C7B51E315BC84459BD30AE6B /* Okra-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Okra-Regular.ttf"; path = "../src/assets/fonts/Okra-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -49,14 +49,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356F01AD99517003FC87E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F11AD99517003FC87E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		13B07FAE1A68108700A75B9A /* Ecommerce_app */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +85,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				B79171E22D1A4C4482877A89 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -105,6 +98,19 @@
 				13B07F961A680F5B00A75B9A /* Ecommerce_app.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B79171E22D1A4C4482877A89 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2CBC19D3529F412F9D499A57 /* Okra-Bold.ttf */,
+				729D0A21EC994AC592CD95FE /* Okra-ExtraBold.ttf */,
+				5360F34A723B493AA3B07254 /* Okra-Medium.ttf */,
+				8532B4880B9E4191BFD594F3 /* Okra-MediumLight.ttf */,
+				C7B51E315BC84459BD30AE6B /* Okra-Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -172,19 +178,18 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				B2DCEB628D7C4C42AED147AF /* Okra-Bold.ttf in Resources */,
+				6A0A9B04DAE94B45AD8CB047 /* Okra-ExtraBold.ttf in Resources */,
+				04BE8A1DA5844686BB531661 /* Okra-Medium.ttf in Resources */,
+				9A27D15CF01441FB94982FC1 /* Okra-MediumLight.ttf in Resources */,
+				E91DFB4E31CA4297AAFA3190 /* Okra-Regular.ttf in Resources */,
+				84273F92450AF48821F405C8 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,14 +280,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* Ecommerce_app */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
@@ -408,7 +405,14 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				USE_HERMES = true;
 			};
 			name = Debug;
 		};
@@ -473,7 +477,13 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
