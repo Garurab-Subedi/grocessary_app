@@ -18,8 +18,8 @@ target 'Ecommerce_app' do
   config = use_native_modules!
 
   # GOOGLE MAP CONFIG
-  rn_maps_path='../node_modules/react-native-maps'
-  pod'react-native-google-maps', :path => rn_maps_path
+  rn_maps_path = '../node_modules/react-native-maps'
+  pod 'react-native-google-maps', :path => rn_maps_path
 
   use_react_native!(
     :path => config[:reactNativePath],
@@ -28,12 +28,18 @@ target 'Ecommerce_app' do
   )
 
   post_install do |installer|
-    # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
     react_native_post_install(
       installer,
       config[:reactNativePath],
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+
+    # ✅ Fix for architecture mismatch on simulator
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+      end
+    end
   end
 end
