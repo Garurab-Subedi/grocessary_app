@@ -6,7 +6,7 @@ const DeliveryLogin = () => {
   return (
     <GestureHandlerRootView style={styles.container}>
         <View style={styles.container}>
-
+            <Text>hELLO </Text>
         </View>
     </GestureHandlerRootView>
   )

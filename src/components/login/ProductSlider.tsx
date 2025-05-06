@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 10,
         width: screenWidth * 0.26,
         height: (screenHeight * 0.5) * 0.20, // adjusted to fit in half screen
-        backgroundColor: '#f2f2f2',
+        backgroundColor: '#f4f4f4',
         justifyContent: 'center',
         borderRadius: 25,
         alignItems: 'center'
