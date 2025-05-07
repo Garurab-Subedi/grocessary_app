@@ -9,10 +9,12 @@ interface CustomerSafeAreaViewProps{
 
 const CustomerSafeAreaView:FC<CustomerSafeAreaViewProps>= ({children, style}) =>{
     return(
-        <View style={styles.container}>
+        <SafeAreaView style={[styles.container, style]}>
+           <View style={styles.container}>
             <SafeAreaView />
             {children}
         </View>
+        </SafeAreaView> 
     )
 }
 

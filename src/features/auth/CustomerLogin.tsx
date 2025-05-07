@@ -1,7 +1,7 @@
 import CustomerSafeAreaView from '@components/global/CustomerSafeAreaView'
 import ProductSlider from '@components/login/ProductSlider'
 import React, { useEffect, useRef, useState } from 'react'
-import { Image, SafeAreaView, StyleSheet, View } from 'react-native'
+import { Alert, Image, Keyboard, SafeAreaView, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { GestureHandlerRootView, PanGestureHandler, State } from 'react-native-gesture-handler'
 import { Colors, Fonts, lightColors } from '@utils/Constants'
 import CustomText from '@components/ui/CustomText'
@@ -11,6 +11,9 @@ import {Animated } from 'react-native'
 import useKeyboardOffsetHeight from '@utils/useKeyboardOffsetHeight'
 import LinearGradient from 'react-native-linear-gradient'
 import CustomerInput from '@components/ui/CustomerInput'
+import CustomButton from '@components/ui/CustomButton'
+import { customerLogin } from '@service/authService'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 const bottomColors = [...lightColors].reverse();
 
@@ -32,7 +35,7 @@ function CustomerLogin() {
         }else{
             Animated.timing(animatedValue,{
                 toValue:-keyboardOffsetHeight * 0.84,
-                duration:1000,
+                duration:500,
                 useNativeDriver:false
             }).start()
         }
@@ -60,6 +63,19 @@ function CustomerLogin() {
     }
   };
 
+  const handleAuth = async () => {
+    Keyboard.dismiss();
+    setLoading(true);
+    try {
+      await customerLogin(phoneNumber);
+      resetAndNavigate('ProductDashboard')
+    } catch (error) {
+      Alert.alert("Login Failed");
+    }finally{
+      setLoading(false);
+    }
+  }
+
   return (
     <GestureHandlerRootView style={styles.container}>
       <PanGestureHandler onHandlerStateChange={handleGesture}>
@@ -72,8 +88,8 @@ function CustomerLogin() {
               style={{transform:[{translateY: animatedValue}]}}
               keyboardShouldPersistTaps='handled'
               keyboardDismissMode='on-drag'
-              contentContainerStyle={styles.subContainer}
-            >
+              contentContainerStyle={styles.subContainer}>
+
               {/* Add your form or content here */}
               <LinearGradient colors={bottomColors} style={styles.gradient} />
                 <View style={styles.content}>
@@ -81,6 +97,7 @@ function CustomerLogin() {
                     <CustomText variant='h2' fontFamily={Fonts.Bold}>
                         Grocery Delivery App
                     </CustomText>
+
                     <CustomText variant='h5' fontFamily={Fonts.SemiBold} style={styles.text}>
                         login in or sign up
                     </CustomText>
@@ -96,11 +113,22 @@ function CustomerLogin() {
                             style={styles.phoneText}
                             variant='h6'
                             fontFamily={Fonts.SemiBold}>
-                                + 91
+                                + 977
                             </CustomText>
                         }
                     />
+
+                    <CustomButton 
+                    disabled={phoneNumber?.length !== 10}
+                    onPress={() => handleAuth()}
+                    loading={loading}
+                    title='Continue'
+                    />
                 </View>
+
+                <TouchableOpacity>
+                  {/* <Icon /> */}
+                </TouchableOpacity>
               
             </Animated.ScrollView>
           </CustomerSafeAreaView>
