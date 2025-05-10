@@ -24,7 +24,7 @@ if(Text.defaultProps) {
 
 if(TextInput.defaultProps) {
     TextInput.defaultProps.allowFontScaling = false;
-}else{
+}else{      
     TextInput.defaultProps = {};
     TextInput.defaultProps.allowFontScaling = false;
 }

@@ -1,7 +1,7 @@
 import CustomerSafeAreaView from '@components/global/CustomerSafeAreaView'
 import ProductSlider from '@components/login/ProductSlider'
 import React, { useEffect, useRef, useState } from 'react'
-import { Alert, Image, Keyboard, SafeAreaView, StyleSheet, TouchableOpacity, View } from 'react-native'
+import { Alert, Image, Keyboard, Platform, SafeAreaView, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { GestureHandlerRootView, PanGestureHandler, State } from 'react-native-gesture-handler'
 import { Colors, Fonts, lightColors } from '@utils/Constants'
 import CustomText from '@components/ui/CustomText'
@@ -13,7 +13,7 @@ import LinearGradient from 'react-native-linear-gradient'
 import CustomerInput from '@components/ui/CustomerInput'
 import CustomButton from '@components/ui/CustomButton'
 import { customerLogin } from '@service/authService'
-import Icon from 'react-native-vector-icons/Ionicons'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 const bottomColors = [...lightColors].reverse();
 
@@ -78,11 +78,12 @@ function CustomerLogin() {
 
   return (
     <GestureHandlerRootView style={styles.container}>
-      <PanGestureHandler onHandlerStateChange={handleGesture}>
+     
         <View style={styles.container}>
           <CustomerSafeAreaView>
             <ProductSlider />
 
+            <PanGestureHandler onHandlerStateChange={handleGesture}>
             <Animated.ScrollView
               bounces={false}
               style={{transform:[{translateY: animatedValue}]}}
@@ -101,7 +102,7 @@ function CustomerLogin() {
                     <CustomText variant='h5' fontFamily={Fonts.SemiBold} style={styles.text}>
                         login in or sign up
                     </CustomText>
-
+                  
                     <CustomerInput
                         onChangeText={(text)=>setPhoneNumber(text.slice(0,10))}
                         onClear={()=>setPhoneNumber('')}
@@ -125,13 +126,11 @@ function CustomerLogin() {
                     title='Continue'
                     />
                 </View>
-
-                <TouchableOpacity>
-                  {/* <Icon /> */}
-                </TouchableOpacity>
-              
+                
             </Animated.ScrollView>
+            </PanGestureHandler>
           </CustomerSafeAreaView>
+         
 
           <View style={styles.footer}>
             <SafeAreaView />
@@ -140,8 +139,12 @@ function CustomerLogin() {
             </CustomText>
             <SafeAreaView />
           </View>
+
+          <TouchableOpacity style={styles.absoluteSwitchDelivery} onPress={() =>resetAndNavigate('DeliveryLogin')}>
+                  <Icon name='bike-fast' color="#000" size={RFValue(18)} />
+           </TouchableOpacity>
         </View>
-      </PanGestureHandler>
+   
     </GestureHandlerRootView>
   );
 }
@@ -194,6 +197,24 @@ const styles = StyleSheet.create({
     marginTop: 2,
     marginBottom: 25,
     opacity:0.8
+  },
+  absoluteSwitchDelivery:{
+    position:'absolute',
+    top:Platform.OS==='ios' ? 50:20,
+    backgroundColor: "#fff",
+    shadowColor:"#000",
+    shadowOffset:{width:1, height:1},
+    shadowOpacity:0.5,
+    shadowRadius:12,
+    elevation:10,
+    padding:10,
+    height:55,
+    width:60,
+    justifyContent:'center',
+    alignItems:'center',
+    right: 10,
+    borderRadius:50,
+    zIndex: 99
   }
 });
 
