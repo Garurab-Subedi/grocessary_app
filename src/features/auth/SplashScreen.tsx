@@ -40,7 +40,7 @@ const SplashScreen: FC = () => {
         return false;
       }
 
-      if (decodedAcessToken?.exp > currentTime) {
+      if (decodedAcessToken?.exp < currentTime) {
         try {
           refresh_tokens();
           await refetchUser(setUser);

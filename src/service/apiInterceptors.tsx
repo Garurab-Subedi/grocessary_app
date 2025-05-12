@@ -1,8 +1,8 @@
 import axios from 'axios';
 import {BASE_URL} from './config';
 import {refresh_tokens} from './authService';
-import {Alert} from 'react-native';
 import {tokenStorage} from '@state/storage';
+import {Alert} from 'react-native';
 
 export const appAxios = axios.create({
   baseURL: BASE_URL,
@@ -16,7 +16,7 @@ appAxios.interceptors.request.use(async config => {
   return config;
 });
 
-appAxios.interceptors.request.use(
+appAxios.interceptors.response.use(
   response => response,
   async error => {
     if (error.response && error.response.status === 401) {
@@ -35,7 +35,7 @@ appAxios.interceptors.request.use(
       const errorMessage =
         error.response.data.message ||
         'An error occurred! something went wrong';
-      //   Alert.alert(errorMessage);
+      Alert.alert(errorMessage);
       console.log('Error in request interceptor', errorMessage);
     }
 
