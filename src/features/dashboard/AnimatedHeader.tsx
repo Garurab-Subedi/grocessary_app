@@ -1,11 +1,21 @@
 import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import React, {FC} from 'react';
+import {useCollapsibleContext} from '@r0b0t3d/react-native-collapsible';
+import Animated, {interpolate, useAnimatedStyle} from 'react-native-reanimated';
+import Header from '@components/dashboard/Header';
 
-const AnimatedHeader = () => {
+const AnimatedHeader: FC<{showNotice: () => void}> = ({showNotice}) => {
+  const {scrollY} = useCollapsibleContext();
+
+  const headerAnimatedStyle = useAnimatedStyle(() => {
+    const opacity = interpolate(scrollY.value, [0, 12], [1, 0]);
+    return {opacity};
+  });
+
   return (
-    <View>
-      <Text>AnimatedHeader</Text>
-    </View>
+    <Animated.View style={headerAnimatedStyle}>
+      <Header showNotice={showNotice} />
+    </Animated.View>
   );
 };
 

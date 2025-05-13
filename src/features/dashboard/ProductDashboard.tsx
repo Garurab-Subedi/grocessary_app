@@ -119,7 +119,15 @@ const ProductDashboard = () => {
 
         <CollapsibleContainer style={styles.panelContainer}>
           <CollapsibleHeaderContainer containerStyle={styles.transparent}>
-            <AnimatedHeader />
+            <AnimatedHeader
+              showNotice={() => {
+                slideDown();
+                const timeout = setTimeout(() => {
+                  slideUp();
+                }, 3500);
+                return () => clearTimeout(timeout);
+              }}
+            />
           </CollapsibleHeaderContainer>
         </CollapsibleContainer>
       </>
